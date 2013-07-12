@@ -1,0 +1,18 @@
+#{extends 'main.html' /}
+#{set title:'Home' /}
+
+
+#{form @Application.addtags(), method: "POST", id:'addTagsForm'}
+
+	<input type="text" name="tags" value="Documentation, FAQ, itrack">
+	<button type="submit">Submit</button>
+	
+#{/form}
+
+
+<h1>Results</h1>
+<ul>
+	#{list tags, as: 'i'}
+	<li>${i}</li>
+	#{/list}
+</ul>
